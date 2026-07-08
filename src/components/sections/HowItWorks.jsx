@@ -24,7 +24,7 @@ const pilares = [
         <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
       </svg>
     ),
-    titulo: 'Interpretação',
+    titulo: 'Planos de leitura guiada',
     texto: 'Não é só ler — é entender o que Deus está falando com você hoje. Reflexões guiadas pra aplicar a Palavra no seu dia a dia.',
     detalhe: 'Perguntas que conectam o texto à sua vida, sem rodeios e sem fórmula pronta.',
     mockup: '/pra ti - screen.jpg',

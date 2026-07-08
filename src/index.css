@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primaryBrown: #8C5E3C;
+  --color-brownDark: #684123;
+  --color-brownDeep: #1C1410;
+  --color-background: #1C1410;
+  --color-sage: #A3B18A;
+  --color-sageDark: #75835C;
+  --color-lightGreen: #A3B18A;
+  --color-gold: #C9973A;
+  --color-goldLight: rgba(201, 151, 58, 0.1);
+  --color-cardBg: rgba(255, 255, 255, 0.08);
+  --color-cardBorder: rgba(255, 255, 255, 0.15);
+  --color-inputBg: rgba(255, 255, 255, 0.1);
+  --color-placeholder: rgba(255, 255, 255, 0.5);
+  --color-divider: rgba(255, 255, 255, 0.2);
+  --color-inactiveDot: rgba(255, 255, 255, 0.3);
+  --color-streakGreen: #A3B18A;
+  --color-textDim: rgba(255, 255, 255, 0.55);
+  --color-textMid: rgba(255, 255, 255, 0.75);
+  --color-textPrimary: rgba(255, 255, 255, 0.9);
+  --color-sageBg: rgba(163, 177, 138, 0.12);
+  --color-sageBorder: rgba(163, 177, 138, 0.3);
+  --color-goldBg: rgba(201, 151, 58, 0.09);
+  --color-goldBorder: rgba(201, 151, 58, 0.22);
+  --color-brownCardBg: rgba(140, 94, 60, 0.14);
+  --color-brownCardBorder: rgba(140, 94, 60, 0.28);
+  --color-white04: rgba(255, 255, 255, 0.04);
+  --color-white06: rgba(255, 255, 255, 0.06);
+  --color-white08: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-textPrimary font-sans antialiased;
+  }
+}
+
+@layer components {
+  .text-reveal-line {
+    @apply overflow-hidden;
+  }
+  .text-reveal-line > span {
+    @apply block;
+    will-change: transform;
+  }
+}

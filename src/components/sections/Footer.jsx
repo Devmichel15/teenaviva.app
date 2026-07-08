@@ -66,17 +66,30 @@ export default function Footer() {
             <a href="#" className="text-textDim hover:text-textPrimary transition-colors">Contato</a>
           </div>
 
-          <a
-            href="/download/teenaviva.apk"
-            className="inline-flex items-center gap-2 bg-gold text-brownDeep font-bold px-6 py-3 rounded-xl transition-transform duration-300 hover:scale-105 active:scale-95 text-sm"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Baixar o app
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="/download/teenaviva.apk"
+              className="inline-flex items-center gap-2 bg-gold text-brownDeep font-bold px-5 py-3 rounded-xl transition-transform duration-300 hover:scale-105 active:scale-95 text-sm"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Android
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 bg-cardBg border border-cardBorder text-textPrimary font-bold px-5 py-3 rounded-xl transition-transform duration-300 hover:scale-105 active:scale-95 text-sm"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              iOS
+            </a>
+          </div>
         </div>
 
         <div className="text-center mt-8">

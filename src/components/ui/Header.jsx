@@ -44,9 +44,7 @@ export default function Header() {
       >
         <nav className="flex items-center justify-between px-5 py-3 bg-cardBg backdrop-blur-xl border border-cardBorder rounded-full">
           <a href="#" className="flex items-center gap-2 shrink-0">
-            <div className="w-7 h-7 rounded-lg bg-gold flex items-center justify-center text-brownDeep font-extrabold text-xs">
-              T
-            </div>
+            <img src="/logo.png" alt="TeenAviva" className="w-7 h-7 rounded-lg object-cover" />
             <span className="font-bold text-textPrimary hidden sm:inline">TeenAviva</span>
           </a>
 
@@ -58,17 +56,30 @@ export default function Header() {
             ))}
           </div>
 
-          <a
-            href="/download/teenaviva.apk"
-            className="hidden md:inline-flex items-center gap-2 bg-gold text-brownDeep font-bold text-sm px-5 py-2 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Baixar agora
-          </a>
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href="/download/teenaviva.apk"
+              className="inline-flex items-center gap-1.5 bg-gold text-brownDeep font-semibold text-xs px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Android
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-1.5 bg-cardBg border border-cardBorder text-textPrimary font-semibold text-xs px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105 active:scale-95"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              iOS
+            </a>
+          </div>
 
           <button onClick={toggleMenu} className="md:hidden flex flex-col gap-1 p-1" aria-label="Menu">
             <span className={`block w-5 h-0.5 bg-textPrimary transition-transform duration-200 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
@@ -93,14 +104,32 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <a
-          ref={(el) => (menuItemsRef.current[navLinks.length] = el)}
-          href="/download/teenaviva.apk"
-          className="mt-4 inline-flex items-center gap-2 bg-gold text-brownDeep font-bold px-8 py-3 rounded-full"
-          onClick={toggleMenu}
-        >
-          Baixar agora
-        </a>
+        <div ref={(el) => (menuItemsRef.current[navLinks.length] = el)} className="mt-4 flex flex-col gap-3 w-full max-w-[220px]">
+          <a
+            href="/download/teenaviva.apk"
+            className="inline-flex items-center justify-center gap-2 bg-gold text-brownDeep font-bold px-8 py-3 rounded-full"
+            onClick={toggleMenu}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Android
+          </a>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center gap-2 bg-cardBg border border-cardBorder text-textPrimary font-bold px-8 py-3 rounded-full"
+            onClick={toggleMenu}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+            iOS
+          </a>
+        </div>
       </div>
     </>
   )

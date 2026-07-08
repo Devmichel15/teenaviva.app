@@ -101,18 +101,19 @@ export default function Download() {
           <p className="text-textDim text-sm mt-3">APK direto · 15 MB · Grátis</p>
         </div>
 
-        <div ref={iosRef} className="bg-goldBg border border-goldBorder rounded-2xl p-6 mb-12 max-w-md mx-auto">
-          <div className="flex items-center gap-3 mb-3 justify-center">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gold">
+        <div ref={iosRef} className="mb-12">
+          <a
+            href="#"
+            className="inline-flex items-center justify-center gap-3 bg-cardBg border border-cardBorder text-textPrimary font-bold text-lg px-10 py-5 rounded-2xl transition-transform duration-300 hover:scale-105 active:scale-95 shadow-xl max-w-md mx-auto"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
               <line x1="8" y1="21" x2="16" y2="21"/>
               <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
-            <p className="text-gold font-semibold">iOS — Em breve</p>
-          </div>
-          <p className="text-textMid text-sm">
-            A versão para iPhone está sendo preparada. Quer ser avisado quando lançar?
-          </p>
+            Baixar para iOS
+          </a>
+          <p className="text-textDim text-sm mt-3">Disponível em breve na App Store</p>
         </div>
 
         <div className="max-w-lg mx-auto">
